@@ -4,32 +4,110 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Hobby</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(220, 217, 249) 0%,
+          rgb(172, 224, 217) 89.8%
+        );
+      }
+
+      button {
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 15px;
+      }
+
+      .container {
+        background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+        display: block;
+        margin: 20px auto;
+        padding: 30px 40px;
+        max-width: 600px;
+        border: 1px solid black;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      p {
+        line-height: 1.3;
+        text-align: center;
+      }
+      .main-img {
+        margin-bottom: 10px;
+        width: 600px;
+        border-radius: 8px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .main-img:hover {
+        margin-bottom: 30px;
+        margin-top: 10px;
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .grid img {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        border-radius: 10px;
+        transition: all 200ms ease-in;
+      }
+
+      .grid img:hover {
+        transform: scale(1.3);
+      }
+
+      a {
+        text-decoration: none;
+        color: blueviolet;
+        display: inline-block;
+        transition: all 150ms ease-in-out;
+      }
+
+      a:hover {
+        color: darkblue;
+        transform: scale(1.1);
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <button>Change Theme</button>
+      <button class="change-theme">Change Theme</button>
       <h1>Reading</h1>
       <h2>My favorite writer</h2>
       <img
+        class="main-img"
         src="https://lh6.googleusercontent.com/proxy/tJm_CySVcCM8fJv4nU-rqk5mDoMIzwn1HYPApGEwit_GYdjnma8PzkRY_7TPSiJOoSm4pRTmLUycmp8R3DgOlKo8PkGFqdveTY8NlliFM5wBVLix7gU9RBke2nx8mFwFaB4Ck3h9Cto8fWqClHbN3nUNbF8oXdco8ypYmX1QFfarCSn9IJQDQFtxnkJFmwKWG6UW3OE"
         alt="ggm"
       />
-      <img
-        src="https://m.media-amazon.com/images/I/81oAEEwxBWL._AC_UF894,1000_QL80_.jpg"
-        alt="book1"
-      />
-      <img
-        src="https://m.media-amazon.com/images/I/A1fBjbTZASL._AC_UF894,1000_QL80_.jpg"
-        alt="book2"
-      />
-      <img
-        src="https://m.media-amazon.com/images/I/914FcXlhBBL._AC_UF894,1000_QL80_.jpg"
-        alt="book3"
-      />
-      <img
-        src="https://m.media-amazon.com/images/I/712UYItqnwL._AC_UF894,1000_QL80_.jpg"
-        alt="book4"
-      />
+      <div class="grid">
+        <img
+          src="https://m.media-amazon.com/images/I/81oAEEwxBWL._AC_UF894,1000_QL80_.jpg"
+          alt="book1"
+        />
+        <img
+          src="https://m.media-amazon.com/images/I/A1fBjbTZASL._AC_UF894,1000_QL80_.jpg"
+          alt="book2"
+        />
+        <img
+          src="https://m.media-amazon.com/images/I/914FcXlhBBL._AC_UF894,1000_QL80_.jpg"
+          alt="book3"
+        />
+        <img
+          src="https://m.media-amazon.com/images/I/712UYItqnwL._AC_UF894,1000_QL80_.jpg"
+          alt="book4"
+        />
+      </div>
+
       <p>
         Gabriel García Márquez (1927–2014) was a Colombian writer and Nobel
         laureate, best known for pioneering "magical realism". His masterpiece,
@@ -38,7 +116,9 @@
         love, power, and destiny, deeply influenced by his Caribbean heritage
         and political views.
       </p>
-      <a href="">Learn more about Gabriel García Márquez</a>
+      <a href="https://www.britannica.com/biography/Gabriel-Garcia-Marquez"
+        >📖Learn more about Gabriel García Márquez</a
+      >
     </div>
     <p>Coded by <a href="">Ana Chicaiza</a></p>
   </body>
