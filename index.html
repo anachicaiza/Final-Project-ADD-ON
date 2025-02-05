@@ -20,6 +20,12 @@
         padding: 10px 15px;
         border-radius: 8px;
         font-size: 15px;
+        background: black;
+        color: white;
+      }
+
+      button:hover {
+        cursor: pointer;
       }
 
       .container {
@@ -93,9 +99,18 @@
       .dark .container {
         background: rgba(255, 255, 255, 0.1);
       }
+
+      .dark a:hover {
+        color: lightseagreen;
+      }
+
+      .dark button {
+        background: white;
+        color: black;
+      }
     </style>
   </head>
-  <body>
+  <body class="">
     <button class="change-theme">Change Theme</button>
     <div class="container">
       <h1>Reading</h1>
@@ -137,6 +152,13 @@
       >
     </div>
     <p>Coded by <a href="">Ana Chicaiza</a></p>
-    <script></script>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
