@@ -15,6 +15,8 @@
       }
 
       button {
+        display: block;
+        margin: 0 auto;
         padding: 10px 15px;
         border-radius: 8px;
         font-size: 15px;
@@ -77,11 +79,25 @@
         color: darkblue;
         transform: scale(1.1);
       }
+
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgb(36, 45, 57) 11.2%,
+          rgb(16, 37, 60) 51.2%,
+          rgb(0, 0, 0) 98.6%
+        );
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
     </style>
   </head>
   <body>
+    <button class="change-theme">Change Theme</button>
     <div class="container">
-      <button class="change-theme">Change Theme</button>
       <h1>Reading</h1>
       <h2>My favorite writer</h2>
       <img
@@ -121,5 +137,6 @@
       >
     </div>
     <p>Coded by <a href="">Ana Chicaiza</a></p>
+    <script></script>
   </body>
 </html>
